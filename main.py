@@ -10,8 +10,8 @@ class Params:
         users_rate:float = Query(None, description='Hourly rate'),
         date_start: str = Query(None, description='Start date for salary calculation. Format: YYYY-MM-DD.'),
         date_end: str = Query('now',description='End date for salary calculation. Leave now - to calculate till today (including). Format: YYYY-MM-DD.'),
-        rate_multiplier: float = Query(1.5, description='User\'s rate multiplier. Normal is 1. Default is 1.5 now cause of paid by hour. Can be increased or decreased'),
-        education_rate_multiplier: float = Query(1, description='User\'s education rate multiplier. Normal is 1. Can be increased or decreased'),
+        rate_multiplier: float = Query(1.5, description='User\'s rate multiplier. Normal is 1. Default is 1.5 now cause of paid by hour.'),
+        education_rate_multiplier: float = Query(1, description='User\'s education rate multiplier. Normal is 1.'),
         education_task_id: int = Query(71358, description='Jira task ID of task-logger for education time spendings. Unlikely to be changed'),
         tempo_endpoint: str = Query('https://api.tempo.io/4/worklogs/user/', description='API endpoint used to get user\'s hours. Unlikely to be changed'),
     ):
